@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class='container'>
+    <h4 class="display-4">Confirm deletion</h4>
+    {{ form_start(Form) }} {{ form_widget(Form) }}
+    <button type="submit" class="btn btn-success">Delete</button>
+    {{ form_end(Form) }}
+</div>
+
+{% endblock %}

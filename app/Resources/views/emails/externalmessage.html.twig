@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<body bgcolor="#f9f9f9" style="margin:0; padding:0; font-family:helvetica,arial,sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0;">
+
+        <tr>
+            <td align="center">
+                <table width="80%" cellspacing="0" cellpadding="0" style="font-size:12px; margin-top:0px;font-weight:300">
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 36px;">
+
+
+                            <table style="font-family:helvetica,arial,sans-serif; font-size:14px;">
+                                <tr>
+                                    <td>
+                                        <h2>Brighton and Hove Wellbeing Service</h2>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Dear {{ data.FirstName }}</p>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>This is a confirmation that we have recieved your registration, a member of the team
+                                        will be in touch shortly using the contact details that you provided.
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <h4>Course details</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Course:</strong> {{ data.GroupEvent.GroupType.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Date:</strong> {{data.GroupEvent.date|date ("d/m/Y") }}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong>Time:</strong> {{data.GroupEvent.date|date ("H:i")}}</td>
+                                </tr>
+
+
+
+
+                            </table>
+
+
+
+
+                            <br>
+                            <br>
+                            <br>
+                            <p style="font-family:helvetica,arial,sans-serif; font-size:14px;">Kind Regards,
+                                <br> Brighton & Hove Wellbeing Service.
+                                <br>
+                            </p>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f9f9f9" align="center">
+                <table width="80%" cellspacing="0" cellpadding="0" style="font-family:helvetica,arial,sans-serif;">
+                    <tr>
+                        <td style="padding: 36px;">
+                            <p style="font-size:10px; color:#595959; font-weight:300;">2018. Copyright Care Unbound Limited Care Unbound Limited (Company Number 6528491) registered
+                                in England and Wales. Registered offices at Fourth Floor, 177 Preston Road, Brighton, BN1
+                                6AG
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<body bgcolor="#f9f9f9" style="margin:0; padding:0; font-family:helvetica,arial,sans-serif;">
+    <table cellspacing="0" cellpadding="0" border="0" width="100%" style="margin:0;">
+
+        <tr>
+            <td align="center">
+                <table width="80%" cellspacing="0" cellpadding="0" style="font-size:12px; margin-top:0px;font-weight:300">
+                    <tr>
+                        <td bgcolor="#FFFFFF" style="padding: 36px;">
+
+
+                            <table style="font-family:helvetica,arial,sans-serif; font-size:14px;">
+                                <tr>
+                                    <td>
+                                        <h2>Brighton and Hove Wellbeing Service</h2>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2>New Registration - {{data.GroupEvent.GroupType.name }}</h2>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <h4>Registration details</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>First name: {{ data.FirstName }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Surname: {{ data.LastName }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth: {{ data.DateOfBirth|date ("d/m/Y")}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Gender: {{ data.Gender }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date of birth: {{ data.DateOfBirth|date ("d/m/Y")}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Contact number: {{ data.ContactNumber }}</td>
+                                </tr>
+                                <tr>
+                                    <td>email address: {{ data.EmailAddress }}</td>
+                                </tr>
+                                <br>
+                                <tr>
+                                    <td>
+                                        <h4>Course details</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Course: {{data.GroupEvent.GroupType.name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Date: {{data.GroupEvent.date|date ("d/m/Y") }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Time: {{data.GroupEvent.date|date ("H:i")}}</td>
+                                </tr>
+
+
+                            </table>
+
+                            <p>
+                                registration generated at {{data.DateStamp|date ("d/m/Y")}} at {{data.DateStamp|date ("H:i")}}
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#f9f9f9" align="center">
+                <table width="80%" cellspacing="0" cellpadding="0" style="font-family:helvetica,arial,sans-serif;">
+                    <tr>
+                        <td style="padding: 36px;">
+                            <p style="font-size:10px; color:#595959; font-weight:300;">2018. Copyright Care Unbound Limited Care Unbound Limited (Company Number 6528491) registered
+                                in England and Wales. Registered offices at Fourth Floor, 177 Preston Road, Brighton, BN1
+                                6AG
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

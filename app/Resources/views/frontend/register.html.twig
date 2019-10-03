@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class='container animated fadeIn'>
+    <h1 class="display-4">{{ GroupEvent.grouptype }}</h1>
+    <hr>
+</div>
+<div class='container animated fadeIn'>
+    <p class='lead'>
+        <strong>Date:</strong> {{ GroupEvent.date|date ("d/m/Y") }}</p>
+    <p class='lead'>
+        <strong>Time:</strong> {{ GroupEvent.date|date ("H:i") }}</p>
+    <p class='lead'>
+        <strong>Location:</strong> {{ GroupEvent.venue }}, {{GroupEvent.venue.postcode}}</p>
+    <hr>
+    <p class='lead'>
+        <strong>Number of sessions:</strong> {{ GroupEvent.grouptype.frequency }}</p>
+    <hr>
+    <h1 class="display-4">Register your interest</h1>
+    <br> {{ form_start(Form) }} {{ form_widget(Form) }}
+    <div class="row justify-content-center">
+
+        <div class="col-sm-6 text-center">
+            <button type=submit class="btn btn-success btn-lg">Register your interest</button>
+        </div>
+
+    </div>
+    {{ form_end(Form) }}
+    <div class=" row ">
+        <a class="btn btn-outline-info " href="{{ path ( 'homepage')}} ">Back to courses</a>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

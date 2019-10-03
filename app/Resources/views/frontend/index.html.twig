@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class='mb-5'></div>
+<div class='container'>
+  <h1 class="display-4 ">Current Wellbeing Courses</h1>
+  <table class="table animated fadeIn">
+    <thead class="lead">
+      <tr>
+        <td>
+          <strong>Date & start time</strong>
+        </td>
+        <td>
+          <strong>Course</strong>
+        </td>
+        <td class='d-none d-md-table-cell'>
+          <strong>Duration</strong>
+        </td>
+        <td class='d-none d-sm-table-cell'>
+          <strong>Venue</strong>
+        </td>
+        <td></td>
+      </tr>
+    </thead>
+
+    {% for i in groupevent %}
+    <tr>
+      <td scope="row lead">{{ i.date|date ("d/m/Y") }} | {{ i.date|date ("H:i") }}</td>
+      <td>{{ i.grouptype }}</td>
+      <td class='d-none d-md-table-cell'>{{ i.grouptype.frequency }} Sessions</td>
+      <td class='d-none d-sm-table-cell'>{{ i.venue }}
+        <a href="https://www.google.com/maps/search/?api=1&query={{ i.venue }}+{{ i.venue.postcode }}" target="_blank" i class="fas fa-map-marker-alt"></a>
+        </a>
+      </td>
+      <td>
+        <a class="btn btn-info" href="{{ path('courseinfo', {'groupevent': i.Id}) }}">
+          <i class="fas fa-info-circle"></i>
+          <span class='d-none d-sm-inline-block'>Info</span>
+        </a>
+      </td>
+    </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class='container'>
+<h1>List of available courses</h1>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col"># of Sessions</th>
+        <th scope="col">Active</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+ {% for i in grouptype %}
+      <tr>
+        <td>{{ i.name }}</td> 
+        <td>{{ i.frequency }}</td>
+        <td>{% if i.active == false %}
+            <i class="far fa-times-circle"></i>
+            {% elseif i.active == true %}
+            <i class="fas fa-check text-center" ></i></td>
+        {% endif %} 
+        <td><a class="btn btn-info" href="{{ path('grouptype_edit', {'grouptype': i.Id}) }}">Edit</a></td>
+        <td><a class="btn btn-danger" href="{{ path('grouptype_delete', {'grouptype': i.Id}) }}">Delete</a></td>
+      </tr>
+{% endfor %}
+    </tbody>
+  </table>
+    <div class="row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6 text-right">
+        <a class="btn btn-secondary" href="{{ path ('grouptype_new')}}">Create new course</a>
+      </div> 
+    </div>
+    <div class="row">
+      <a class="btn btn-primary" href="{{ path ('groupevent_list')}}">Back to courses</a>
+   </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %} {% block body %}
+<div class="container animated fadeIn">
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <a class="btn btn-outline-info btn-block" href="{{ path ('homepage')}}">Back to courses</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <hr>
+      <h2 class="display-4">Course: {{ groupevent.grouptype.name }}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-7 col-md-6 lead">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <strong>Date</strong>
+            </td>
+            <td>{{ groupevent.date|date ("d/m/Y") }}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Time</strong>
+            </td>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Location</strong>
+            </td>
+            <td>{{ groupevent.venue }}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Number of sessions</strong>
+            </td>
+            <td>{{ groupevent.grouptype.frequency }}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Bus routes</strong>
+            </td>
+            <td>{{ groupevent.venue.busroutes }}</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Site information</strong>
+            </td>
+            <td>{{ groupevent.venue.sitenotes }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-5 col-md-6">
+      <div class="embed-responsive embed-responsive-4by3">
+        <iframe frameborder="0" style="border:0"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAnMUNdJZIy3LocPKUZBufy_gNvQ6OXJeI&q={{ groupevent.venue }}+{{ groupevent.venue.postcode }}"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <hr>
+      <h3 class="display-4">Course Information</h3>
+      <p>{{ groupevent.grouptype.description|nl2br }}</p>
+      <br>
+    </div>
+  </div>
+
+  <div class="row mb-5">
+    <div class="col-sm-6 col-lg-4 text-center mx-auto">
+      <a class="btn btn-success btn-lg btn-block"
+        href="{{ path('registrationevent', {'groupevent': groupevent.Id}) }}">Register for this course</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4 col-md-3">
+      <a class="btn btn-outline-info btn-block" href="{{ path ('homepage')}}">Back to courses</a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

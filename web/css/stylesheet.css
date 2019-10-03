@@ -1,0 +1,24 @@
+.logo {
+    width:100px;
+    display:block;
+    float: right;
+}
+
+.footer-text{
+    text-align: center;
+ }
+
+.main-wrapper{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+html, body {
+    height: 100%;
+}
+
+.note-colour{
+    color: #FF0000;
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class='container'>
+<h1>Create new course</h1>
+{{ form_start(Form) }}
+
+{{ form_row(Form.grouptype) }}
+<a class="btn btn-info" href="{{ path('grouptype_new') }}">Create new course</a>
+<a class="btn btn-secondary" href="{{ path('grouptype_list') }}">Manage course topics</a>
+<br>
+{{ form_row(Form.venue) }} 
+<a class="btn btn-info" href="{{ path('venue_new') }}">Create new venue</a>
+<a class="btn btn-secondary" href="{{ path('venue_list') }}">Manage venues</a>
+<br>
+{{ form_row(Form.date) }}
+{{ form_row(Form.active) }}
+
+
+<button type="submit" class="btn btn-success">Save</button>
+<a class="btn btn-danger" href="{{ path ('groupevent_list')}}">Cancel</a>
+{{ form_end(Form) }}
+</div>
+
+{% endblock %}

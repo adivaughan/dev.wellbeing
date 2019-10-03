@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class='container'>
+    <h1>Whoops! Something went wrong.</h1>
+    <br>
+</div>
+<div class='container'>
+    <h5>Your registration has been receievd by the Brighton and Hove Wellbeing team, however, it looks like the email address
+        you submitted </h5>
+    <br>
+    <h3>Please contact the Brighton and Hove Wellbeing Service directly on 0800 123456</h3>
+    <br>
+    <h4>The opening hours of the service are:</h4>
+    <p>Monday - Friday - 8am -7pm</p>
+    <p>The service is closed on the weekend</p>
+    <br>
+    <h6>If you require additional support please see these resources:</h6>
+    <p>
+        <strong>Organisation ABC</strong> - Tel: 01273 11111 - www.internetwebsite.com</p>
+    <p>
+        <strong>Organisation ABC</strong> - Tel: 01273 11111 - www.internetwebsite.com</p>
+    <br>
+    <a class="btn btn-primary " href="{{ path ('homepage')}}">Back to courses</a>
+</div>
+
+
+
+{% endblock %}

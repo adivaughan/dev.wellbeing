@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+
+  <title>{% block title %}Brighton and Hove Wellbeing Service | Courses{% endblock %}</title>
+  {% block stylesheets %}{% endblock %}
+  <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ asset('css/stylesheet.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <!--
+  <div class=container>
+    <img src="/images/Wellbeing Logo.jpg" alt="Brighton and Hove Wellbeing Service Logo" width="80px" height="auto">
+    <img src="/images/NHS Logo.jpg" alt="NHS Logo" width="90px" height="auto" class="logo ml-auto">
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://www.brightonandhovewellbeing.org/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://www.brightonandhovewellbeing.org/about/">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/children-and-young-people/">Children & Young People</a>
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/adults/">Adults</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            GPs & Professionals
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/introduction/">Summary</a>
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/referring-a-patient/">Making a Feferral</a>
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/treatment-interventions/">Treatment Interventions</a>
+            <a class="dropdown-item" href="https://www.brightonandhovewellbeing.org/risk-management/">Risk Management</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://www.brightonandhovewellbeing.org/resources/">Resources</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://www.courses.brightonandhovewellbeing.org/">Courses
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://www.brightonandhovewellbeing.org/faqs/">FAQ</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link disabled" href="https://www.brightonandhovewellbeing.org/contact/">Contact</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+-->
+
+  <nav class="navbar navbar-light bg-light fixed-top">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.brightonandhovewellbeing.org">
+          <i class="fas fa-arrow-alt-circle-left"></i> Back to brightonandhovewellbeing.org</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="main-wrapper">
+    <div class='mb-5'></div>
+    {% block body %} {% endblock %}
+    <div class='mb-5 mt-5'></div>
+  </div>
+  <footer>
+    <div class="container">
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-md-2 col-sm-2 col-5 mb-2">
+          <img src="/images/Here logo.gif" class="d-block img-fluid mx-auto" align="middle" alt="Here (Care Unbound Ltd.) Logo">
+        </div>
+        <div class="col-md-2 col-sm-2 col-5 mb-2">
+          <img src="/images/Sussex Partnership Foundation Trust Logo.gif" class="d-block img-fluid mx-auto" align="middle" alt="Sussex Partnership Foundation Trust Logo">
+        </div>
+        <div class="col-md-2 col-sm-2 col-5 mb-2">
+          <img src="/images/YMCA logo.gif" class="d-block img-fluid mx-auto" align="middle" alt="YMCA logo">
+        </div>
+        <div class="col-md-2 col-sm-2 col-5 mb-2">
+          <img src="/images/Brighton Mind logo.gif" class="d-block img-fluid mx-auto" align="middle" alt="Brighton Mind logo">
+        </div>
+      </div>
+      <hr>
+      <div class="footer-text">
+        <p>
+          <a href="https://www.brightonandhovewellbeing.org/">home</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/about">about</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/guided-self-help">services</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/introduction">gps and professionals </a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/resources">resources</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/faqs">faqs</a>
+          &nbsp;|&nbsp;
+          <a href="https://www.brightonandhovewellbeing.org/contact">contact</a>
+        </p>
+        <p>Care Unbound Limited (Company Number 6528491) registered in England and Wales.
+          <br />Registered offices at Fourth Floor, 177 Preston Road, Brighton, BN1 6AG
+          <br />© 2017 Copyright Care Unbound Limited
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script> {% block javascripts %} {% endblock %}
+</body>
+
+</html>
