@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<div class='container'>
+    <h1 class='display-4'>We have received your registration</h1>
+    <hr>
+</div>
+<div class='container lead'>
+    <p>You have registered your interest for the following course:</p>
+    <p class='note-colour'>
+        <strong>Please note that this does not confirm your place on this course, only that we have received your registration.</strong>
+    </p>
+    <p>
+        <strong>Course:</strong> {{ GroupEvent.grouptype }}</p>
+    <P>
+        <strong>Date:</strong> {{ GroupEvent.date|date ("d/m/Y") }}</P>
+    <p>
+        <strong>Time:</strong> {{ GroupEvent.date|date ("H:i") }}</P>
+    <p>
+        <strong>Location:</strong> {{ GroupEvent.venue }}</p>
+    <hr>
+    <h3 class='display-4'>What happens next?</h3>
+    <hr>
+    <p>A member of the team will assess your application and will be in touch soon.</p>
+    <br>
+    <p>If you require additional support please see these resources:</p>
+    <p>
+        <strong>Organisation ABC</strong> - Tel: 01273 11111 - www.internetwebsite.com</p>
+    <p>
+        <strong>Organisation ABC</strong> - Tel: 01273 11111 - www.internetwebsite.com</p>
+    <br>
+    <a class="btn btn-outline-info" href="{{ path ('homepage')}}">Back to courses</a>
+</div>
+
+
+
+{% endblock %}

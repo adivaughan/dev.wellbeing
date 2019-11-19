@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %} {% block body %}
 
 <div class='mb-5'></div>
+<div class="container text-center text-danger"><i class="fas fa-exclamation">
+    Demo Use Only
+    <i class="fas fa-exclamation"></i> </i></div>
 <div class='container'>
   <h1 class="display-4 ">Current Wellbeing Courses</h1>
   <table class="table animated fadeIn">
@@ -28,7 +31,8 @@
       <td>{{ i.grouptype }}</td>
       <td class='d-none d-md-table-cell'>{{ i.grouptype.frequency }} Sessions</td>
       <td class='d-none d-sm-table-cell'>{{ i.venue }}
-        <a href="https://www.google.com/maps/search/?api=1&query={{ i.venue }}+{{ i.venue.postcode }}" target="_blank" i class="fas fa-map-marker-alt"></a>
+        <a href="https://www.google.com/maps/search/?api=1&query={{ i.venue }}+{{ i.venue.postcode }}" target="_blank" i
+          class="fas fa-map-marker-alt"></a>
         </a>
       </td>
       <td>
